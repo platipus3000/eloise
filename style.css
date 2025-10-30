@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel&family=Crimson+Text&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('./assets/background.jpg') no-repeat center center/cover;
+  color: #e6d9b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(255, 215, 100, 0.3);
+  max-width: 800px;
+}
+
+h1 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffdf7e;
+  text-shadow: 0 0 10px #d8a74d;
+}
+
+.intro {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #dcd2a4;
+}
+
+.explanation p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e6e0cc;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  text-decoration: none;
+  background: linear-gradient(90deg, #3a2a1b, #5e4321);
+  color: #f1e4c0;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: transform 0.2s, background 0.3s;
+  font-family: 'Cinzel', serif;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #6a4a1f, #8d6933);
+  transform: scale(1.05);
+}
+
+.btn.small {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.index-bg {
+  background-image: url('./assets/index_bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.enigme1-bg {
+  background-image: url('./assets/enigme1_bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.enigme2-bg {
+  background-image: url('./assets/enigme2_bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.enigme3-bg {
+  background-image: url('./assets/enigme3_bg.png');
+  background-size: cover;
+  background-position: center;
+}
+/* Ajoutez des classes similaires pour les autres énigmes si nécessaire */
+
+.enigme1-page {
+  background: url('assets/odeis.jpg') no-repeat center center/cover;
+}
+
+.enigme2-page {
+  background: url('assets/enigme2_bg.png') no-repeat center center/cover;
+}
+
+.enigme3-page {
+  background: url('assets/enigme3_bg.png') no-repeat center center/cover;
+}

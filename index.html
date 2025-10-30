@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Énigmes d’Eloise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="index-bg">
+  <audio id="bg-music" src="assets/music_index.mp3" loop></audio>
+
+  <div class="overlay" id="welcome-screen">
+    <h1>Les Énigmes d’Eloise</h1>
+    <p class="intro">Cliquez pour entrer dans le royaume des ombres et commencer l’aventure...</p>
+    <button id="start-btn" class="btn">Entrer dans le royaume</button>
+  </div>
+
+  <div class="overlay" id="menu-screen" style="display:none;">
+    <h1>Les Énigmes d’Eloise</h1>
+    <div class="menu">
+      <a href="enigme1.html" class="btn">Énigme I</a>
+      <a href="enigme2.html" class="btn">Énigme II</a>
+      <a href="enigme3.html" class="btn">Énigme III</a>
+      <a href="dino/index.html" class="btn">Le jeu</a>
+      
+      
+    </div>
+  </div>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    const startBtn = document.getElementById('start-btn');
+    const welcomeScreen = document.getElementById('welcome-screen');
+    const menuScreen = document.getElementById('menu-screen');
+
+    startBtn.addEventListener('click', () => {
+      music.volume = 0.4;
+      music.play().catch(err => console.log("Lecture auto bloquée :", err));
+      welcomeScreen.style.display = 'none';
+      menuScreen.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Énigme II - Les Énigmes d’Aurore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="enigme2-bg">
+  <!-- Musique de l'énigme -->
+  <audio id="bg-music" src="assets/music_enigme.mp3" loop></audio>
+
+  <div class="overlay">
+    <h1>Énigme II</h1>
+    <p class="intro">
+      Je suis le pillier central de Retour de Plage.<br>
+      Comparable à un donjon, ma taille est décuplée par rapport aux avant-postes appelés "boutiques" par les gueux du royaume.<br>
+      Qui suis-je ?
+    </p>
+
+    <input type="text" id="reponse" placeholder="Votre réponse..." class="btn">
+    <button id="valider" class="btn">Valider</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    const music = document.getElementById('bg-music');
+
+    // Lecture automatique dès la première interaction
+    document.addEventListener('click', startMusic, { once: true });
+    document.addEventListener('keydown', startMusic, { once: true });
+
+    function startMusic() {
+      music.volume = 0.4;
+      music.play().catch(err => console.log("Lecture auto bloquée :", err));
+    }
+
+    // Son de réussite
+    const successSound = new Audio('assets/success.mp3');
+
+    // Validation de la réponse
+    document.getElementById('valider').addEventListener('click', () => {
+      const rep = document.getElementById('reponse').value.trim().toLowerCase();
+      const msg = document.getElementById('message');
+
+      if (rep === 'atelier' || rep === "l'atelier") {  // Réponse adaptée au texte de l'énigme
+        successSound.play();
+        setTimeout(() => {
+          window.location.href = 'enigme2_reponse.html';
+        }, 1200);
+      } else {
+        msg.textContent = "Mauvaise réponse... Essayez encore.";
+      }
+    });
+  </script>
+</body>
+</html>
