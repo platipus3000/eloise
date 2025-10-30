@@ -13,8 +13,8 @@
   <div class="overlay">
     <h1>Énigme I</h1>
     <p class="intro">
-      Je renferme les savoirs ancestraux de Retour de Plage tel un vieux grimoire.<br>
-      Je ne suis pas vivant mais tout le monde connaît mon nom.<br>
+      Mon effluve hante les boutiques.<br>
+      
       Qui suis-je ?
     </p>
 
@@ -43,7 +43,7 @@
       const rep = document.getElementById('reponse').value.trim().toLowerCase();
       const msg = document.getElementById('message');
 
-      if (rep === 'odeis') {  // Réponse adaptée au texte de l'énigme
+      if (rep === 'éclat de mer' || rep === 'eclat de mer') {  // Réponse adaptée au texte de l'énigme
         successSound.play();
         setTimeout(() => {
           window.location.href = 'enigme1_reponse.html';
